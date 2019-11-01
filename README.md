@@ -22,7 +22,7 @@ It also contains example on how to use Tools to search your conversation in more
 It is a simple example of messages classification using Naive Bayes, polish language stemmer and TF-IDF vectorizer. \
 Accuracy on 1:1 conversation was summarized in following table:\
 **Min. words** - Minimum number of words given message have to have to be used in classification. \
-**No. train** - Amount of messages that was used to train the model.
+**No. train** - Amount of messages that was used to train the model.\
 **Acc** - Accuracy.
 
 | Min. words | No. train | Acc   |
