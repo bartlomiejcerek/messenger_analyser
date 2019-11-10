@@ -35,7 +35,7 @@ Results of classification, 80% messages were used for training, 10% validation a
 | 25         | 2 179      |72.17% |
 
 #### Accuracy in group conversation
-Same parameters were used as in perevious example just on group conversation of 5 people. 
+Same parameters were used on 5 person group conversation. 
 
 | Min. words | No. train | Acc   |
 | ------     | ------    | ----- |
@@ -43,9 +43,37 @@ Same parameters were used as in perevious example just on group conversation of 
 | 10         | 3 740      |40.86% |
 | 15         | 780        |32.31% |
 
-
 Short messages are in general more difficult to classify. When we increase **Min. words** and take in concideration only longer messages accuracy improves. \
 However as we discard more and more messages we are being left with smaller training datasets, and that decrease classification accuracy. \
+
+## Who Wrote That? - Recurent Neural Network
+*scripts/RecurentNeuralNetClassif.ipynb*\
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://drive.google.com/file/d/1fjib-peZ4cDHyL29ELGPBaCXikw0qIXX/view?usp=sharing) \
+This is script uses LSTM (Long Short Term Memory) recurent neural network for performing same task.\
+Since deep learning method decides by itself what features of texts are important, way less language specific processing is needed.
+However some additional transformations are nessecary (like padding) and many hyper parameters need to be tuned. \
+Since training required GPU for fast training Google Collabolatory was used.
+#### Accuracy in 1:1 convesration
+Network was tested on same conversation that Naive Bayes.\
+For training with each min. numer of words some adjustments of hyperparmeters were done, however no exhaustive search was performed. 
+
+| Min. words | No. train | Acc   |
+| ------     | ------    | ----- |
+| 5          | 28 104     |75.72% |
+| 10         | 11 334     |78.93% |
+| 15         | 5 505      |81.12% |
+| 20         | 2 411      |77.82% |
+| 25         | 2 179      |75.62% |
+
+#### Accuracy in group conversation
+Same parameters were used on 5 person group conversation. 
+
+| Min. words | No. train | Acc   |
+| ------     | ------    | ----- |
+| 5          | 19 412     |37.21% |
+| 10         | 3 740      |40.86% |
+| 15         | 780        |32.31% |
+
 \
 \
 \
