@@ -39,9 +39,13 @@ def getConvInfo(conv):
     dic['first message'] = conv["messages"][l-1]['timestamp_ms']
     return dic
 
-def getMessages(conv):
+def getMessages(conv, ignore_quiters = False):
     messages = conv["messages"]
     messages.reverse() #reverse to get chronological order
+    
+    if ignore_quiters: #Delete people who quite conv 
+        participants = [node['name'] for node in conv['participants']]
+        messages = [mess for mess in messages if mess['sender_name'] in participants]
     return messages
 
 def findByDate(messages, day, month, year):
