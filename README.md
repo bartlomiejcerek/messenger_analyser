@@ -1,7 +1,7 @@
 # Messenger Analyser
 
 ## Introduction
-Simple tools for analyzing messenger conversations and performing simple classifications.\
+Simple tools for analyzing messenger conversations and performing classifications using Naive Bayes and Recurent Neural Network.\
 History of all messenger conversations can be downloaded as .json files like described in this tutorial:
 https://www.zapptales.com/en/download-facebook-messenger-chat-history-how-to/
 Unpack your conversation data and place it next to scripts and tools folder.
@@ -14,14 +14,14 @@ Usually string is Name+Surname+random characters or GroupChatName+random charact
 
 ## Generate Conversation Report
 *scripts/ConversationReport.ipynb*\
-It is simple Jupyter Notebook that obtains and visualize few most important information from given conversation. 
-It also contains example on how to use Tools to search your conversation in more efficient way that messenger interface allows. 
+It is simple Jupyter Notebook that obtains and visualize few most important information from given conversation. \
+It also contains example on how to use tools module to search your conversations in more efficient way than messenger interface allows. 
 
 ## Who Wrote That? - Naive Bayes
 *scripts/NaiveBayesClassif.ipynb*\
 It is a simple example of messages classification using Naive Bayes, polish language stemmer and TF-IDF vectorizer. \
 #### Accuracy in 1:1 conversation
-Results of classification, 80% messages were used for training, 10% validation and 10% for test. Example conversation with over 100k exchanges messages was used.\
+Results of classification, 80% messages were used for training, 10% validation and 10% for test. Example conversation with over 100k exchanged messages was used.\
 **Min. words** - Minimum number of words given message have to have to be used in classification. \
 **No. train** - Amount of messages that was used to train the model.\
 **Acc** - Accuracy.
