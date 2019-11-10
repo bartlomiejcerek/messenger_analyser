@@ -1,6 +1,6 @@
 # Messenger Analyser
 
-## Introducation 
+## Introduction
 Simple tools for analysing messenger conversations and performing simple classifications.\
 History of all messenger conversations can be downloaded as .jason files like described in this tutorial:
 https://www.zapptales.com/en/download-facebook-messenger-chat-history-how-to/
