@@ -1,8 +1,8 @@
 # Messenger Analyser
 
 ## Introduction
-Simple tools for analysing messenger conversations and performing simple classifications.\
-History of all messenger conversations can be downloaded as .jason files like described in this tutorial:
+Simple tools for analyzing messenger conversations and performing simple classifications.\
+History of all messenger conversations can be downloaded as .json files like described in this tutorial:
 https://www.zapptales.com/en/download-facebook-messenger-chat-history-how-to/
 Unpack your conversation data and place it next to scripts and tools folder.
 
@@ -20,7 +20,7 @@ It also contains example on how to use Tools to search your conversation in more
 ## Who Wrote That? - Naive Bayes
 *scripts/NaiveBayesClassif.ipynb*\
 It is a simple example of messages classification using Naive Bayes, polish language stemmer and TF-IDF vectorizer. \
-#### Accuracy in 1:1 convesration
+#### Accuracy in 1:1 conversation
 Results of classification, 80% messages were used for training, 10% validation and 10% for test. Example conversation with over 100k exchanges messages was used.\
 **Min. words** - Minimum number of words given message have to have to be used in classification. \
 **No. train** - Amount of messages that was used to train the model.\
@@ -52,8 +52,8 @@ However as we discard more and more messages we are being left with smaller trai
 This is script uses LSTM (Long Short Term Memory) recurent neural network for performing same task.\
 Since deep learning method decides by itself what features of texts are important, way less language specific processing is needed.
 However some additional transformations are nessecary (like padding) and many hyper parameters need to be tuned. \
-Since training required GPU for fast training Google Collabolatory was used.
-#### Accuracy in 1:1 convesration
+Since training required GPU for fast training Google Collaboratory  was used.
+#### Accuracy in 1:1 conversation
 Network was tested on same conversation that Naive Bayes.\
 For training with each min. numer of words some adjustments of hyperparmeters were done, however no exhaustive search was performed. 
 
@@ -70,10 +70,19 @@ Same parameters were used on 5 person group conversation.
 
 | Min. words | No. train | Acc   |
 | ------     | ------    | ----- |
-| 5          | 19 412     |37.21% |
-| 10         | 3 740      |40.86% |
-| 15         | 780        |32.31% |
+| 5          | 25 720    |47.56% |
+| 10         | 4 888     |49.32% |
+| 15         | 972       |39.16% |
 
+## Results 
+In 1:1 conversations RNN shows a bit higher accuracy than Naive Bayes when number of words per message is smaller. \
+When size of the training set is decreasing RNN and Naive Bayes show quite simmilar accuracy. \
+\
+Advantage of Naive Bayes is ease of use and speed of traning, however fine-tuned RNN could perform visibly better. \
+\
+For group conversation accuracy differences between classifires became more visible. 
+RNN after setting small batch size and small learning rate as well as long training time got accuracy around **50%**.\
+It is good score taking in concideration that random choice accuracy is 20% and datasets for each class in group conversations are few times smaller than in 1:1.\
 \
 \
 \
