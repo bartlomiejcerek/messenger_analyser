@@ -3,7 +3,7 @@
 ## Introduction
 Simple tools for analyzing messenger conversations and performing classifications using Naive Bayes and Recurent Neural Network.\
 History of all messenger conversations can be downloaded as .json files like described in this tutorial:
-https://www.zapptales.com/en/download-facebook-messenger-chat-history-how-to/
+https://www.zapptales.com/en/download-facebook-messenger-chat-history-how-to/ \
 Unpack your conversation data and place it next to scripts and tools folder.
 
 #### Tools 
