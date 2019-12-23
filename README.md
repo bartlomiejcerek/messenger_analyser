@@ -39,9 +39,9 @@ Same parameters were used on 5 person group conversation.
 
 | Min. words | No. train | Acc   |
 | ------     | ------    | ----- |
-| 5          | 19 412     |37.21% |
-| 10         | 3 740      |40.86% |
-| 15         | 780        |32.31% |
+| 5          | 19 412     |39.91% |
+| 10         | 3 740      |45.99% |
+| 15         | 780        |34.63% |
 
 Short messages are in general more difficult to classify. When we increase **Min. words** and take in concideration only longer messages accuracy improves. \
 However as we discard more and more messages we are being left with smaller training datasets, and that decreases classification accuracy. 
